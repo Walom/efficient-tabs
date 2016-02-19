@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "Efficient Tabs",
+	"version": "0.1",
+
+	"permissions": [
+		"tabs", "*://*/*", "storage",
+	],
+
+	"content_scripts": [
+		{
+			"matches": [
+				"*"
+			],
+
+			"js": [
+				"content.js"
+			]
+		}
+	],
+
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Efficient Tabs"
+	},
+
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	}
+}
